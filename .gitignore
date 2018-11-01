@@ -1,4 +1,4 @@
 *.tmp
 *.gradle
 *.nb-gradle
-/build/
+build/
