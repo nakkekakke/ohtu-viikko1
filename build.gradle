@@ -29,12 +29,19 @@ dependencies {
     testCompile 'junit:junit:4.12'
 }
 
+// Define the main class for the application
+mainClassName = 'ohtu.ohtuvarasto.Main'
+
 jar {
     manifest {
         attributes 'Main-Class': 'ohtu.ohtuvarasto.Main'
     }
 }
 
-// Define the main class for the application
-mainClassName = 'ohtu.ohtuvarasto.Main'
+jacocoTestReport {
+    reports {
+        xml.enabled true
+        html.enabled true
+    }
+}
 
