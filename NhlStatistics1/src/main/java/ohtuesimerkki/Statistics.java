@@ -8,10 +8,8 @@ import java.util.List;
 public class Statistics {
 
     private List<Player> players;
-    private Reader reader;
 
     public Statistics(Reader reader) {
-        this.reader = reader;
         players = reader.getPlayers();
     }
 
@@ -42,9 +40,10 @@ public class Statistics {
         ArrayList<Player> topScorers = new ArrayList<Player>();
         Iterator<Player> playerIterator = players.iterator();
         
-        while (howMany>=0) {
+        int i = howMany;
+        while (i>=0) {
             topScorers.add( playerIterator.next() );            
-            howMany--;
+            i--;
         }
         
         return topScorers;

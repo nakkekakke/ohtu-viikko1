@@ -24,7 +24,8 @@ public class PlayerReader implements Reader {
         while (scanner.hasNextLine()) {
             String[] parts =  scanner.nextLine().split(";");            
             
-            if (parts.length > 3) {
+            final int trimLength = 3;
+            if (parts.length > trimLength) {
                 players.add(new Player(parts[0].trim(), parts[1], extractInt(parts[3]), extractInt(parts[4])));
             }
         }
